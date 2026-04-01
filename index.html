@@ -58,25 +58,41 @@
       flex: 1;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      justify-content: center;
       color: white;
       padding: 1rem;
+      min-height: 0;
     }
-    .menu-screen h1 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
+    .menu-header {
+      text-align: center;
+      flex-shrink: 0;
+      padding: 0.5rem 0;
+    }
+    .menu-header h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.3rem;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+    .menu-header p {
+      margin-bottom: 0.5rem;
+    }
+    .deck-grid {
+      flex: 1;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.75rem;
+      padding: 0.5rem;
+      align-content: start;
+      -webkit-overflow-scrolling: touch;
     }
     .deck-card {
       cursor: pointer;
-      max-width: 400px;
-      width: 100%;
       transition: transform 0.2s;
+      overflow: hidden;
     }
     .deck-card:hover { transform: scale(1.03); }
     .deck-card img {
-      height: 150px;
+      height: 120px;
       object-fit: cover;
       width: 100%;
     }
@@ -428,15 +444,19 @@
 
     <!-- MENU SCREEN -->
     <div v-if="screen === 'menu'" class="menu-screen">
-      <h1><i class="bi bi-car-front-fill"></i> Auto Quartett</h1>
-      <p class="text-light mb-3">Wähle ein Spiel:</p>
-      <div v-for="game in availableGames" :key="game.id" class="deck-card card mb-2" @click="selectGame(game)">
-        <img :src="game.coverImageUrl" class="card-img-top" :alt="game.title">
-        <div class="card-body py-2 px-3">
-          <h6 class="card-title mb-0">{{ game.title }}</h6>
+      <div class="menu-header">
+        <h1><i class="bi bi-car-front-fill"></i> Auto Quartett</h1>
+        <p class="text-light">Wähle ein Spiel:</p>
+      </div>
+      <div class="deck-grid">
+        <div v-for="game in availableGames" :key="game.id" class="deck-card card" @click="selectGame(game)">
+          <img :src="game.coverImageUrl" class="card-img-top" :alt="game.title">
+          <div class="card-body py-2 px-3">
+            <h6 class="card-title mb-0" style="font-size:0.85rem;">{{ game.title }}</h6>
+          </div>
         </div>
       </div>
-      <div v-if="loadingGames" class="text-light mt-3">
+      <div v-if="loadingGames" class="text-light mt-3 text-center">
         <div class="spinner-border spinner-border-sm"></div> Lade Spiele…
       </div>
     </div>
@@ -489,7 +509,7 @@
         <!-- Player A Stack -->
         <div class="stack-area">
           <div class="card-stack player-a-stack"
-               :class="{ 'active-stack': phase === 'tap-stack' && currentPlayer === 'A', 'clickable': phase === 'tap-stack' && currentPlayer === 'A' }"
+               :class="{ 'active-stack': (phase === 'tap-stack' && currentPlayer === 'A') || (phase === 'show-result' && roundWinner === 'A'), 'clickable': (phase === 'tap-stack' && currentPlayer === 'A') || (phase === 'show-result' && roundWinner === 'A') }"
                @click="tapStack('A')">
             <i class="bi bi-stack"></i>
             <span class="stack-count">{{ playerA.length }}</span>
@@ -583,7 +603,7 @@
         <!-- Player B Stack -->
         <div class="stack-area">
           <div class="card-stack player-b-stack"
-               :class="{ 'active-stack': phase === 'tap-stack' && currentPlayer === 'B', 'clickable': phase === 'tap-stack' && currentPlayer === 'B' }"
+               :class="{ 'active-stack': (phase === 'tap-stack' && currentPlayer === 'B') || (phase === 'show-result' && roundWinner === 'B'), 'clickable': (phase === 'tap-stack' && currentPlayer === 'B') || (phase === 'show-result' && roundWinner === 'B') }"
                @click="tapStack('B')">
             <i class="bi bi-stack"></i>
             <span class="stack-count">{{ playerB.length }}</span>
@@ -609,10 +629,7 @@
         </span>
         <span v-else-if="phase === 'show-result'">
           <span v-if="roundWinner">
-            {{ roundWinner === 'A' ? 'Spieler A' : 'Spieler B' }} gewinnt mit „{{ selectedCategoryLabel }}"!
-            <button class="btn btn-sm btn-success" @click="nextRound()">
-              <i class="bi bi-arrow-right"></i> Weiter
-            </button>
+            {{ roundWinner === 'A' ? 'Spieler A' : 'Spieler B' }} gewinnt mit „{{ selectedCategoryLabel }}"! – Tippe auf den Stapel für die nächste Runde.
           </span>
         </span>
       </div>
@@ -734,16 +751,18 @@
 
         // --- Tap Stack ---
         function tapStack(player) {
+          // After result: winner taps their stack to proceed
+          if (phase.value === 'show-result') {
+            if (player !== roundWinner.value) return;
+            nextRound();
+            return;
+          }
+
           if (phase.value !== 'tap-stack') return;
           if (player !== currentPlayer.value) return;
 
-          if (currentPlayer.value === 'A') {
-            currentCardA.value = playerA.value[0];
-            currentCardB.value = playerB.value[0];
-          } else {
-            currentCardA.value = playerA.value[0];
-            currentCardB.value = playerB.value[0];
-          }
+          currentCardA.value = playerA.value[0];
+          currentCardB.value = playerB.value[0];
 
           // Flip the current player's card
           if (currentPlayer.value === 'A') {
