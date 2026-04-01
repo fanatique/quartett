@@ -562,7 +562,8 @@
                   <div class="card-stats" v-if="currentCardB">
                     <table>
                       <tr v-for="cat in deckData.categories" :key="cat.key"
-                          :class="getRowClass('B', cat.key)">
+                          :class="getRowClass('B', cat.key)"
+                          @click="selectCategory(cat.key)">
                         <td>
                           {{ cat.label }}
                           <span class="stat-better-icon" :class="cat.better === 'higher' ? 'text-success' : 'text-info'">
