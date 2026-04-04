@@ -482,26 +482,51 @@
           </tr>
         </table>
         <div class="text-center mt-3">
-          <button class="btn btn-success btn-lg" @click="startGame()">
-            <i class="bi bi-play-fill"></i> Spiel starten
+          <button class="btn btn-success btn-lg me-2" @click="startGame()">
+            <i class="bi bi-play-fill"></i> Lokal spielen
           </button>
+          <button class="btn btn-primary btn-lg" @click="startOnlineGame()">
+            <i class="bi bi-globe"></i> Online spielen
+          </button>
+        </div>
+        <div v-if="remoteError" class="text-center mt-2">
+          <span class="badge bg-danger">{{ remoteError }}</span>
         </div>
       </div>
     </div>
 
     <!-- GAME SCREEN -->
     <div v-if="screen === 'game'" class="game-container">
+      <!-- Waiting for opponent overlay -->
+      <div v-if="waitingForOpponent" class="result-overlay" style="z-index:200;">
+        <div class="result-box">
+          <div style="font-size:2.5rem;"><i class="bi bi-hourglass-split"></i></div>
+          <h2>Warte auf Mitspieler...</h2>
+          <p class="small text-muted">Teile diesen Link:</p>
+          <div class="input-group mb-2" style="max-width:400px;">
+            <input type="text" class="form-control form-control-sm" :value="shareUrl" readonly>
+            <button class="btn btn-outline-primary btn-sm" @click="copyShareUrl()">
+              <i class="bi bi-clipboard"></i> Kopieren
+            </button>
+          </div>
+          <button class="btn btn-outline-secondary btn-sm mt-2" @click="backToMenu()">Abbrechen</button>
+        </div>
+      </div>
+
       <div class="game-header">
         <div class="player-info player-a" :class="{ 'active-player': currentPlayer === 'A' }">
-          <i class="bi bi-person-fill"></i> Spieler A – {{ playerA.length }} Karten
+          <i class="bi bi-person-fill"></i> Spieler A{{ gameMode === 'remote' && myRole === 'A' ? ' (Du)' : '' }} – {{ playerA.length }} Karten
         </div>
         <div>
+          <span v-if="gameMode === 'remote'" class="badge bg-primary me-2">
+            <i class="bi bi-globe"></i> Online
+          </span>
           <button class="btn btn-sm btn-outline-light" @click="backToMenu()">
             <i class="bi bi-house-fill"></i> Menü
           </button>
         </div>
         <div class="player-info player-b" :class="{ 'active-player': currentPlayer === 'B' }">
-          Spieler B – {{ playerB.length }} Karten <i class="bi bi-person-fill"></i>
+          Spieler B{{ gameMode === 'remote' && myRole === 'B' ? ' (Du)' : '' }} – {{ playerB.length }} Karten <i class="bi bi-person-fill"></i>
         </div>
       </div>
 
@@ -622,14 +647,30 @@
           </span>
         </span>
         <span v-else-if="phase === 'tap-stack'">
-          {{ currentPlayer === 'A' ? 'Spieler A' : 'Spieler B' }} ist dran – tippe auf den Stapel, um die Karte aufzudecken!
+          <span v-if="gameMode === 'remote' && currentPlayer !== myRole">
+            <i class="bi bi-hourglass-split"></i> Gegner ist am Zug – warte...
+          </span>
+          <span v-else>
+            {{ currentPlayer === 'A' ? 'Spieler A' : 'Spieler B' }} ist dran – tippe auf den Stapel, um die Karte aufzudecken!
+          </span>
         </span>
         <span v-else-if="phase === 'select-category'">
-          {{ currentPlayer === 'A' ? 'Spieler A' : 'Spieler B' }}: Wähle eine Kategorie auf deiner Karte!
+          <span v-if="gameMode === 'remote' && currentPlayer !== myRole">
+            <i class="bi bi-hourglass-split"></i> Gegner wählt eine Kategorie...
+          </span>
+          <span v-else>
+            {{ currentPlayer === 'A' ? 'Spieler A' : 'Spieler B' }}: Wähle eine Kategorie auf deiner Karte!
+          </span>
         </span>
         <span v-else-if="phase === 'show-result'">
           <span v-if="roundWinner">
-            {{ roundWinner === 'A' ? 'Spieler A' : 'Spieler B' }} gewinnt mit „{{ selectedCategoryLabel }}"! – Tippe auf den Stapel für die nächste Runde.
+            {{ roundWinner === 'A' ? 'Spieler A' : 'Spieler B' }} gewinnt mit „{{ selectedCategoryLabel }}"!
+            <span v-if="gameMode === 'remote' && roundWinner !== myRole">
+              – Warte auf Gegner...
+            </span>
+            <span v-else>
+              – Tippe auf den Stapel für die nächste Runde.
+            </span>
           </span>
         </span>
       </div>
@@ -654,7 +695,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vue@3.4.38/dist/vue.global.prod.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    const { createApp, ref, computed, nextTick } = Vue;
+    const { createApp, ref, computed, nextTick, watch, onUnmounted } = Vue;
 
     createApp({
       setup() {
@@ -680,6 +721,18 @@
         const wonAnimation = ref(null);
         const gameWinner = ref(null);
 
+        // --- Remote Mode State ---
+        const gameMode = ref('local');        // 'local' | 'remote'
+        const sessionId = ref(null);
+        const playerToken = ref(localStorage.getItem('aq_playerToken') || crypto.randomUUID());
+        localStorage.setItem('aq_playerToken', playerToken.value);
+        const myRole = ref(null);             // 'A' | 'B'
+        const waitingForOpponent = ref(false);
+        const remoteError = ref(null);
+        const shareUrl = ref('');
+        let pollTimer = null;
+        let pollVersion = 0;
+
         // --- Computed ---
         const completeCards = computed(() => {
           if (!deckData.value) return [];
@@ -702,12 +755,14 @@
             console.error('Failed to load games index:', e);
           }
           loadingGames.value = false;
+          return availableGames.value;
         }
 
         async function selectGame(game) {
           try {
             const resp = await fetch('decks/' + game.file);
             deckData.value = await resp.json();
+            location.hash = '#/game/' + game.id;
             screen.value = 'rules';
           } catch (e) {
             console.error('Failed to load deck:', e);
@@ -751,6 +806,19 @@
 
         // --- Tap Stack ---
         function tapStack(player) {
+          if (gameMode.value === 'remote') {
+            if (player !== myRole.value) return;
+            if (phase.value === 'show-result') {
+              if (player !== roundWinner.value) return;
+              remoteNext();
+              return;
+            }
+            if (phase.value !== 'tap-stack') return;
+            if (currentPlayer.value !== myRole.value) return;
+            remoteTap();
+            return;
+          }
+
           // After result: winner taps their stack to proceed
           if (phase.value === 'show-result') {
             if (player !== roundWinner.value) return;
@@ -777,6 +845,12 @@
         // --- Select Category ---
         function selectCategory(catKey) {
           if (phase.value !== 'select-category' && phase.value !== 'stich') return;
+
+          if (gameMode.value === 'remote') {
+            if (currentPlayer.value !== myRole.value) return;
+            remoteSelect(catKey);
+            return;
+          }
 
           // Only the active player's card is clickable
           const valA = currentCardA.value.stats[catKey];
@@ -852,7 +926,8 @@
           const classes = [];
 
           // Selectable only on active player's card during selection
-          if ((phase.value === 'select-category' || phase.value === 'stich') &&
+          const isMyTurn = gameMode.value === 'remote' ? currentPlayer.value === myRole.value : true;
+          if (isMyTurn && (phase.value === 'select-category' || phase.value === 'stich') &&
               ((currentPlayer.value === 'A' && cardSide === 'A') ||
                (currentPlayer.value === 'B' && cardSide === 'B'))) {
             classes.push('selectable');
@@ -882,12 +957,214 @@
 
         // --- Navigation ---
         function backToMenu() {
+          stopPolling();
+          gameMode.value = 'local';
+          sessionId.value = null;
+          myRole.value = null;
+          waitingForOpponent.value = false;
+          remoteError.value = null;
           screen.value = 'menu';
           deckData.value = null;
+          location.hash = '#/';
         }
 
+        // --- Remote API Client ---
+        async function apiCall(action, data, method = 'POST') {
+          const url = method === 'GET'
+            ? 'api/session.php?action=' + action + '&' + new URLSearchParams(data).toString()
+            : 'api/session.php?action=' + action;
+          const opts = method === 'GET'
+            ? {}
+            : { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) };
+          const resp = await fetch(url, opts);
+          const json = await resp.json();
+          if (!resp.ok) throw new Error(json.error || 'API error');
+          return json;
+        }
+
+        function applyRemoteState(state) {
+          if (!state.changed) return;
+          pollVersion = state.version;
+          currentPlayer.value = state.currentPlayer;
+          phase.value = state.phase;
+          selectedCategory.value = state.selectedCategory;
+          roundWinner.value = state.roundWinner;
+          gameWinner.value = state.gameWinner;
+          playerA.value = new Array(state.playerACardCount);
+          playerB.value = new Array(state.playerBCardCount);
+
+          // Card visibility
+          if (state.cardA) {
+            currentCardA.value = state.cardA;
+            if (state.cardARevealed) nextTick(() => { cardAFlipped.value = true; });
+          } else {
+            currentCardA.value = null;
+            cardAFlipped.value = false;
+          }
+          if (state.cardB) {
+            currentCardB.value = state.cardB;
+            if (state.cardBRevealed) nextTick(() => { cardBFlipped.value = true; });
+          } else {
+            currentCardB.value = null;
+            cardBFlipped.value = false;
+          }
+
+          if (state.roundWinner) {
+            wonAnimation.value = state.roundWinner;
+          } else {
+            wonAnimation.value = null;
+          }
+
+          if (state.phase === 'tap-stack') {
+            cardAFlipped.value = false;
+            cardBFlipped.value = false;
+            currentCardA.value = null;
+            currentCardB.value = null;
+          }
+
+          // Game over
+          if (state.status === 'finished' && state.gameWinner) {
+            screen.value = 'gameover';
+            stopPolling();
+          }
+
+          // Waiting status
+          waitingForOpponent.value = (state.status === 'waiting');
+        }
+
+        function startPolling() {
+          stopPolling();
+          pollTimer = setInterval(async () => {
+            try {
+              const state = await apiCall('state', {
+                sessionId: sessionId.value,
+                playerToken: playerToken.value,
+                version: pollVersion,
+              }, 'GET');
+              if (state.changed) applyRemoteState(state);
+            } catch (e) {
+              console.error('Poll error:', e);
+            }
+          }, 2000);
+        }
+
+        function stopPolling() {
+          if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
+        }
+
+        async function startOnlineGame() {
+          remoteError.value = null;
+          try {
+            const result = await apiCall('create', {
+              deckId: deckData.value.deck.id,
+              playerToken: playerToken.value,
+            });
+            gameMode.value = 'remote';
+            sessionId.value = result.sessionId;
+            myRole.value = result.playerRole;
+            waitingForOpponent.value = true;
+            shareUrl.value = location.origin + location.pathname + '#/game/' + deckData.value.deck.id + '/' + result.sessionId;
+            location.hash = '#/game/' + deckData.value.deck.id + '/' + result.sessionId;
+            screen.value = 'game';
+            startPolling();
+          } catch (e) {
+            remoteError.value = e.message;
+          }
+        }
+
+        async function joinRemoteSession(deckId, sid) {
+          remoteError.value = null;
+          try {
+            // Load deck first
+            const games = availableGames.value.length ? availableGames.value : await (await fetch('decks/index.json')).json();
+            const game = games.find(g => g.id === deckId);
+            if (!game) throw new Error('Spiel nicht gefunden');
+            const deckResp = await fetch('decks/' + game.file);
+            deckData.value = await deckResp.json();
+
+            const result = await apiCall('join', {
+              sessionId: sid,
+              playerToken: playerToken.value,
+            });
+            gameMode.value = 'remote';
+            sessionId.value = sid;
+            myRole.value = result.playerRole;
+            waitingForOpponent.value = (result.status === 'waiting');
+            screen.value = 'game';
+            startPolling();
+          } catch (e) {
+            remoteError.value = e.message;
+            screen.value = 'menu';
+          }
+        }
+
+        async function remoteTap() {
+          try {
+            const state = await apiCall('tap', {
+              sessionId: sessionId.value,
+              playerToken: playerToken.value,
+            });
+            applyRemoteState(state);
+          } catch (e) { remoteError.value = e.message; }
+        }
+
+        async function remoteSelect(catKey) {
+          try {
+            const state = await apiCall('select', {
+              sessionId: sessionId.value,
+              playerToken: playerToken.value,
+              categoryKey: catKey,
+            });
+            applyRemoteState(state);
+          } catch (e) { remoteError.value = e.message; }
+        }
+
+        async function remoteNext() {
+          try {
+            const state = await apiCall('next', {
+              sessionId: sessionId.value,
+              playerToken: playerToken.value,
+            });
+            applyRemoteState(state);
+          } catch (e) { remoteError.value = e.message; }
+        }
+
+        function copyShareUrl() {
+          navigator.clipboard.writeText(shareUrl.value).catch(() => {});
+        }
+
+        // --- Hash Router ---
+        function parseHash() {
+          const hash = location.hash || '#/';
+          const parts = hash.replace('#/', '').split('/').filter(Boolean);
+          // /#/game/{deckId}/{sessionId}
+          if (parts[0] === 'game' && parts[1] && parts[2]) {
+            joinRemoteSession(parts[1], parts[2]);
+            return;
+          }
+          // /#/game/{deckId}
+          if (parts[0] === 'game' && parts[1]) {
+            const deckId = parts[1];
+            loadGames().then(() => {
+              const game = availableGames.value.find(g => g.id === deckId);
+              if (game) {
+                selectGame(game);
+              }
+            });
+            return;
+          }
+          // default: menu
+        }
+
+        window.addEventListener('hashchange', parseHash);
+        onUnmounted(() => { stopPolling(); window.removeEventListener('hashchange', parseHash); });
+
         // --- Init ---
-        loadGames();
+        loadGames().then(() => {
+          if (location.hash && location.hash !== '#/' && location.hash !== '#') {
+            parseHash();
+          }
+        });
 
         return {
           screen,
@@ -908,8 +1185,15 @@
           wonAnimation,
           gameWinner,
           completeCards,
+          gameMode,
+          sessionId,
+          myRole,
+          waitingForOpponent,
+          remoteError,
+          shareUrl,
           selectGame,
           startGame,
+          startOnlineGame,
           restartGame,
           tapStack,
           selectCategory,
@@ -917,6 +1201,7 @@
           getRowClass,
           formatValue,
           backToMenu,
+          copyShareUrl,
         };
       }
     }).mount('#app');
