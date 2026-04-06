@@ -235,23 +235,32 @@ function processImage(\GdImage $src, int $w, int $h): string
 
 /**
  * Ensure $path resolves to a location inside $baseDir.
- * Prevents path traversal if $path already exists; for paths that do not yet
- * exist, validates the parent directory instead.
+ * For paths that do not yet exist (e.g. not-yet-created subdirectories),
+ * walks up the directory tree until an existing ancestor is found, then
+ * verifies that ancestor is within $baseDir.
  */
 function assertSafePath(string $path, string $baseDir): void
 {
-    $resolved = realpath($path);
-    if ($resolved === false) {
-        // File doesn't exist yet – check the parent directory
-        $resolved = realpath(dirname($path));
-        if ($resolved === false) {
-            throw new RuntimeException('Cache directory structure is invalid');
-        }
-    }
     $base = realpath($baseDir);
     if ($base === false) {
         throw new RuntimeException('Cache base directory not found');
     }
+
+    // Walk up until we find an existing filesystem node
+    $check = $path;
+    while (true) {
+        $resolved = realpath($check);
+        if ($resolved !== false) {
+            break;
+        }
+        $parent = dirname($check);
+        if ($parent === $check) {
+            // Reached filesystem root without finding any existing ancestor
+            throw new RuntimeException('Cache directory structure is invalid');
+        }
+        $check = $parent;
+    }
+
     $insideBase = str_starts_with($resolved, $base . DIRECTORY_SEPARATOR) || $resolved === $base;
     if (!$insideBase) {
         throw new RuntimeException('Path escapes cache directory');
