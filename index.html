@@ -638,7 +638,7 @@
       </div>
       <div class="deck-grid">
         <div v-for="game in gamesInCategory" :key="game.id" class="deck-card card" @click="selectGame(game)">
-          <img :src="game.coverImageUrl" class="card-img-top" :alt="game.title">
+          <img :src="coverImgUrl(game.id)" class="card-img-top" :alt="game.title">
           <div class="card-body py-2 px-3">
             <h6 class="card-title mb-0" style="font-size:0.85rem;">{{ game.title }}</h6>
           </div>
@@ -767,7 +767,7 @@
               <div class="flip-back">
                 <div class="quartett-card card-a" :class="{ 'card-won': wonAnimation === 'A' }">
                   <div class="card-image-wrap" v-if="currentCardA">
-                    <img :src="currentCardA.imageUrl" :alt="currentCardA.title">
+                    <img :src="cardImgUrl(currentCardA)" :alt="currentCardA.title">
                     <div class="card-title-bar">{{ currentCardA.title }}</div>
                   </div>
                   <div class="card-stats" v-if="currentCardA">
@@ -814,7 +814,7 @@
               <div class="flip-back">
                 <div class="quartett-card card-b" :class="{ 'card-won': wonAnimation === 'B' }">
                   <div class="card-image-wrap" v-if="currentCardB">
-                    <img :src="currentCardB.imageUrl" :alt="currentCardB.title">
+                    <img :src="cardImgUrl(currentCardB)" :alt="currentCardB.title">
                     <div class="card-title-bar">{{ currentCardB.title }}</div>
                   </div>
                   <div class="card-stats" v-if="currentCardB">
@@ -855,7 +855,7 @@
         <div class="duel-panel-content">
           <div class="duel-thumbnails">
             <div class="duel-thumb" :class="{ 'duel-winner': roundWinner === 'A' }">
-              <img :src="currentCardA.imageUrl" :alt="currentCardA.title">
+              <img :src="cardImgUrl(currentCardA)" :alt="currentCardA.title">
               <div class="duel-thumb-name player-a-bg">{{ currentCardA.title }}</div>
             </div>
             <div class="duel-vs">
@@ -865,7 +865,7 @@
               <span v-else class="badge bg-secondary fs-6">VS</span>
             </div>
             <div class="duel-thumb" :class="{ 'duel-winner': roundWinner === 'B' }">
-              <img :src="currentCardB.imageUrl" :alt="currentCardB.title">
+              <img :src="cardImgUrl(currentCardB)" :alt="currentCardB.title">
               <div class="duel-thumb-name player-b-bg">{{ currentCardB.title }}</div>
             </div>
           </div>
@@ -1026,7 +1026,7 @@
         async function loadGames() {
           loadingGames.value = true;
           try {
-            const resp = await fetch('decks/index.json');
+            const resp = await fetch('api/deck.php?action=index');
             availableGames.value = await resp.json();
           } catch (e) {
             console.error('Failed to load games index:', e);
@@ -1048,7 +1048,7 @@
 
         async function selectGame(game) {
           try {
-            const resp = await fetch('decks/' + game.file);
+            const resp = await fetch('api/deck.php?action=deck&id=' + encodeURIComponent(game.id));
             deckData.value = await resp.json();
             location.hash = '#/game/' + game.id;
             screen.value = 'rules';
@@ -1244,6 +1244,16 @@
           return side === roundWinner.value ? 'duel-winner-cell' : 'duel-loser-cell';
         }
 
+        // --- Image proxy URLs ---
+        function cardImgUrl(card) {
+          if (!card || !deckData.value) return '';
+          return 'api/image.php?deck=' + encodeURIComponent(deckData.value.deck.id) + '&card=' + encodeURIComponent(card.id);
+        }
+
+        function coverImgUrl(deckId) {
+          return 'api/image.php?deck=' + encodeURIComponent(deckId) + '&type=cover';
+        }
+
         // --- Format values ---
         function formatValue(val, cat) {
           if (val === null || val === undefined) return '–';
@@ -1374,10 +1384,13 @@
           remoteError.value = null;
           try {
             // Load deck first
-            const games = availableGames.value.length ? availableGames.value : await (await fetch('decks/index.json')).json();
-            const game = games.find(g => g.id === deckId);
+            if (!availableGames.value.length) {
+              const idxResp = await fetch('api/deck.php?action=index');
+              availableGames.value = await idxResp.json();
+            }
+            const game = availableGames.value.find(g => g.id === deckId);
             if (!game) throw new Error('Spiel nicht gefunden');
-            const deckResp = await fetch('decks/' + game.file);
+            const deckResp = await fetch('api/deck.php?action=deck&id=' + encodeURIComponent(deckId));
             deckData.value = await deckResp.json();
 
             const result = await apiCall('join', {
@@ -1511,6 +1524,8 @@
           getDuelRowClass,
           getDuelCellClass,
           formatValue,
+          cardImgUrl,
+          coverImgUrl,
           backToMenu,
           copyShareUrl,
         };
