@@ -1,4 +1,4 @@
-# Quartett 🚗
+# Quartett 🚗 🛻
 
 Browserbasiertes Quartettspiel mit mehreren Themen-Decks, lokaler Deck-Verwaltung per JSON und einem einfachen Zwei-Spieler-Modus über PHP-Sessiondateien.
 
