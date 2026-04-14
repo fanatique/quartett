@@ -1,0 +1,381 @@
+{
+  "deck": {
+    "id": "gelaendewagen-quartett-1945-heute",
+    "title": "Geländewagen Quartett – 1945 bis heute",
+    "coverImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Willys_MB_%28Bild_1_2008-06-14%29%2C_Baujahr_1944.JPG",
+    "titleImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Willys_MB_%28Bild_1_2008-06-14%29%2C_Baujahr_1944.JPG",
+    "locale": "de-DE"
+  },
+  "categories": [
+    {
+      "key": "leistung_ps",
+      "label": "Leistung",
+      "unit": "PS",
+      "better": "higher"
+    },
+    {
+      "key": "drehmoment_nm",
+      "label": "Drehmoment",
+      "unit": "Nm",
+      "better": "higher"
+    },
+    {
+      "key": "hoechstgeschwindigkeit_kmh",
+      "label": "Höchstgeschwindigkeit",
+      "unit": "km/h",
+      "better": "higher"
+    },
+    {
+      "key": "gewicht_kg",
+      "label": "Gewicht",
+      "unit": "kg",
+      "better": "lower"
+    },
+    {
+      "key": "bodenfreiheit_mm",
+      "label": "Bodenfreiheit",
+      "unit": "mm",
+      "better": "higher"
+    },
+    {
+      "key": "boeschungswinkel_vorne_deg",
+      "label": "Böschungswinkel vorn",
+      "unit": "°",
+      "better": "higher"
+    },
+    {
+      "key": "untersetzung_score",
+      "label": "Untersetzung",
+      "unit": "Score",
+      "better": "higher"
+    },
+    {
+      "key": "sperren_score",
+      "label": "Diff-/Sperren-Hardware",
+      "unit": "Score",
+      "better": "higher"
+    }
+  ],
+  "cards": [
+    {
+      "id": "GW01",
+      "title": "Willys MB (1944)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Willys_MB_%28Bild_1_2008-06-14%29%2C_Baujahr_1944.JPG",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 55,
+        "drehmoment_nm": 142,
+        "hoechstgeschwindigkeit_kmh": 105,
+        "gewicht_kg": 1113,
+        "bodenfreiheit_mm": 223,
+        "boeschungswinkel_vorne_deg": 45,
+        "untersetzung_score": 5,
+        "sperren_score": 0
+      }
+    },
+    {
+      "id": "GW02",
+      "title": "Land Rover Series I 80\" (1949)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/1948_Land_Rover_Series_I_%28001%29.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 50,
+        "drehmoment_nm": 103,
+        "hoechstgeschwindigkeit_kmh": 89,
+        "gewicht_kg": 1220,
+        "bodenfreiheit_mm": 220,
+        "boeschungswinkel_vorne_deg": 50,
+        "untersetzung_score": 5,
+        "sperren_score": 0
+      }
+    },
+    {
+      "id": "GW03",
+      "title": "Jeep CJ-5 3.8 (1972)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/1974_Jeep_CJ-5_Renegade_V8_in_yellow_-_all_original_-_at_2015_AACA_Eastern_Regional_Fall_Meet_1of7.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 100,
+        "drehmoment_nm": 265,
+        "hoechstgeschwindigkeit_kmh": 130,
+        "gewicht_kg": 1250,
+        "bodenfreiheit_mm": 215,
+        "boeschungswinkel_vorne_deg": 44,
+        "untersetzung_score": 6,
+        "sperren_score": 0
+      }
+    },
+    {
+      "id": "GW04",
+      "title": "Toyota Land Cruiser FJ40 (1978)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/1980_Toyota_Land_Cruiser_%28FJ40%29_hardtop_%2825439621823%29.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 125,
+        "drehmoment_nm": 285,
+        "hoechstgeschwindigkeit_kmh": 130,
+        "gewicht_kg": 1550,
+        "bodenfreiheit_mm": 235,
+        "boeschungswinkel_vorne_deg": 41,
+        "untersetzung_score": 7,
+        "sperren_score": 0
+      }
+    },
+    {
+      "id": "GW05",
+      "title": "Range Rover Classic 3.5 V8 (1971)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Range_Rover_Classic.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 135,
+        "drehmoment_nm": 251,
+        "hoechstgeschwindigkeit_kmh": 160,
+        "gewicht_kg": 1770,
+        "bodenfreiheit_mm": 220,
+        "boeschungswinkel_vorne_deg": 40,
+        "untersetzung_score": 6,
+        "sperren_score": 1
+      }
+    },
+    {
+      "id": "GW06",
+      "title": "Lada Niva 1600 (1980)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Lada_Niva_modern.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 76,
+        "drehmoment_nm": 118,
+        "hoechstgeschwindigkeit_kmh": 130,
+        "gewicht_kg": 1065,
+        "bodenfreiheit_mm": 220,
+        "boeschungswinkel_vorne_deg": 37,
+        "untersetzung_score": 6,
+        "sperren_score": 1
+      }
+    },
+    {
+      "id": "GW07",
+      "title": "Mercedes-Benz 240 GD W460 (1979)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercedes-Benz_300GD.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 72,
+        "drehmoment_nm": 137,
+        "hoechstgeschwindigkeit_kmh": 115,
+        "gewicht_kg": 1730,
+        "bodenfreiheit_mm": 210,
+        "boeschungswinkel_vorne_deg": 36,
+        "untersetzung_score": 7,
+        "sperren_score": 2
+      }
+    },
+    {
+      "id": "GW08",
+      "title": "Suzuki SJ410 (1981)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Suzuki_SJ410_vr_blue.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 45,
+        "drehmoment_nm": 76,
+        "hoechstgeschwindigkeit_kmh": 120,
+        "gewicht_kg": 890,
+        "bodenfreiheit_mm": 220,
+        "boeschungswinkel_vorne_deg": 45,
+        "untersetzung_score": 7,
+        "sperren_score": 0
+      }
+    },
+    {
+      "id": "GW09",
+      "title": "Mitsubishi Pajero I 2.5 TD (1983)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/1984_Mitsubishi_Pajero_%28NA%29_hardtop_%282015-07-03%29.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 84,
+        "drehmoment_nm": 174,
+        "hoechstgeschwindigkeit_kmh": 135,
+        "gewicht_kg": 1670,
+        "bodenfreiheit_mm": 210,
+        "boeschungswinkel_vorne_deg": 36,
+        "untersetzung_score": 7,
+        "sperren_score": 0
+      }
+    },
+    {
+      "id": "GW10",
+      "title": "Jeep Cherokee XJ 2.5 (1984)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jeep_Cherokee_XJ_002.JPG",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 121,
+        "drehmoment_nm": 198,
+        "hoechstgeschwindigkeit_kmh": 160,
+        "gewicht_kg": 1480,
+        "bodenfreiheit_mm": 210,
+        "boeschungswinkel_vorne_deg": 36,
+        "untersetzung_score": 6,
+        "sperren_score": 0
+      }
+    },
+    {
+      "id": "GW11",
+      "title": "Nissan Patrol GR Y60 2.8 TD (1989)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Patrol_GR_Y60.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 115,
+        "drehmoment_nm": 235,
+        "hoechstgeschwindigkeit_kmh": 150,
+        "gewicht_kg": 2070,
+        "bodenfreiheit_mm": 220,
+        "boeschungswinkel_vorne_deg": 37,
+        "untersetzung_score": 8,
+        "sperren_score": 1
+      }
+    },
+    {
+      "id": "GW12",
+      "title": "Land Rover Defender 90 200Tdi (1990)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/1991_Land_Rover_Defender_90_200TDI_pickup_in_blue%2C_front_left.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 111,
+        "drehmoment_nm": 255,
+        "hoechstgeschwindigkeit_kmh": 132,
+        "gewicht_kg": 1780,
+        "bodenfreiheit_mm": 250,
+        "boeschungswinkel_vorne_deg": 47,
+        "untersetzung_score": 8,
+        "sperren_score": 1
+      }
+    },
+    {
+      "id": "GW13",
+      "title": "Toyota Land Cruiser 80 4.2 D (1990)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Toyota_Land_Cruiser_VX_80_series_1990-1997_frontleft_2008-04-11_U.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 131,
+        "drehmoment_nm": 285,
+        "hoechstgeschwindigkeit_kmh": 155,
+        "gewicht_kg": 2200,
+        "bodenfreiheit_mm": 230,
+        "boeschungswinkel_vorne_deg": 35,
+        "untersetzung_score": 8,
+        "sperren_score": 1
+      }
+    },
+    {
+      "id": "GW14",
+      "title": "Jeep Wrangler TJ 4.0 (1997)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/0_Jeep_Wrangler_Rubicon_%28JL%29_1.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 181,
+        "drehmoment_nm": 301,
+        "hoechstgeschwindigkeit_kmh": 170,
+        "gewicht_kg": 1460,
+        "bodenfreiheit_mm": 216,
+        "boeschungswinkel_vorne_deg": 44,
+        "untersetzung_score": 7,
+        "sperren_score": 0
+      }
+    },
+    {
+      "id": "GW15",
+      "title": "Mercedes-Benz G 500 W463 (1998)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercedes-Benz_G500.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 296,
+        "drehmoment_nm": 456,
+        "hoechstgeschwindigkeit_kmh": 190,
+        "gewicht_kg": 2270,
+        "bodenfreiheit_mm": 205,
+        "boeschungswinkel_vorne_deg": 36,
+        "untersetzung_score": 8,
+        "sperren_score": 3
+      }
+    },
+    {
+      "id": "GW16",
+      "title": "Suzuki Jimny 1.5 ALLGRIP PRO (2018)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Suzuki_Jimny_%284th_generation%29_1X7A6314.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 102,
+        "drehmoment_nm": 130,
+        "hoechstgeschwindigkeit_kmh": 145,
+        "gewicht_kg": 1090,
+        "bodenfreiheit_mm": 210,
+        "boeschungswinkel_vorne_deg": 37,
+        "untersetzung_score": 7,
+        "sperren_score": 0
+      }
+    },
+    {
+      "id": "GW17",
+      "title": "Ford Bronco Badlands 2-Türer (2024)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ford_Bronco_%286th_generation%29_Badlands_1X7A0211.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 275,
+        "drehmoment_nm": 420,
+        "hoechstgeschwindigkeit_kmh": 161,
+        "gewicht_kg": 2140,
+        "bodenfreiheit_mm": 294,
+        "boeschungswinkel_vorne_deg": 43,
+        "untersetzung_score": 9,
+        "sperren_score": 2
+      }
+    },
+    {
+      "id": "GW18",
+      "title": "Land Rover Defender 110 D250 (2025)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Land_Rover_Defender_%28L663%29_DSC_9062.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 249,
+        "drehmoment_nm": 570,
+        "hoechstgeschwindigkeit_kmh": 188,
+        "gewicht_kg": 2386,
+        "bodenfreiheit_mm": 291,
+        "boeschungswinkel_vorne_deg": 38,
+        "untersetzung_score": 8,
+        "sperren_score": 1
+      }
+    },
+    {
+      "id": "GW19",
+      "title": "Jeep Wrangler Rubicon 2-Türer (2025)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Jeep_Wrangler_Rubicon_%28JL%29_4xe_1X7A0285.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 285,
+        "drehmoment_nm": 353,
+        "hoechstgeschwindigkeit_kmh": 159,
+        "gewicht_kg": 1926,
+        "bodenfreiheit_mm": 277,
+        "boeschungswinkel_vorne_deg": 47,
+        "untersetzung_score": 10,
+        "sperren_score": 2
+      }
+    },
+    {
+      "id": "GW20",
+      "title": "Toyota Land Cruiser 250 2.8 D-4D (2024)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Toyota_Land_Cruiser_250_VX.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 204,
+        "drehmoment_nm": 500,
+        "hoechstgeschwindigkeit_kmh": 170,
+        "gewicht_kg": 2460,
+        "bodenfreiheit_mm": 221,
+        "boeschungswinkel_vorne_deg": 31,
+        "untersetzung_score": 8,
+        "sperren_score": 1
+      }
+    }
+  ]
+}

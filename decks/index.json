@@ -21,6 +21,20 @@
     "type": "autos"
   },
   {
+    "id": "gelaendewagen-quartett-1945-heute",
+    "title": "Geländewagen Quartett – 1945 bis heute",
+    "coverImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Willys_MB_%28Bild_1_2008-06-14%29%2C_Baujahr_1944.JPG",
+    "file": "gelaendewagen-quartett-1945-heute.json",
+    "type": "autos"
+  },
+  {
+    "id": "designstudien-quartett-sehnsucht-und-wahnsinn",
+    "title": "Designstudien Quartett – Sehnsucht & Wahnsinn",
+    "coverImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Lancia_Stratos_Zero_%28Bertone%29.jpg",
+    "file": "designstudien-quartett-sehnsucht-und-wahnsinn.json",
+    "type": "autos"
+  },
+  {
     "id": "floorballschlaeger-quartett-2025",
     "title": "Floorballschläger Quartett",
     "coverImageUrl": "https://static.necy.eu/i/w/203838_1800x900.webp",

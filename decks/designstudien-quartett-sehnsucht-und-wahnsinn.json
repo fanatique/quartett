@@ -1,0 +1,381 @@
+{
+  "deck": {
+    "id": "designstudien-quartett-sehnsucht-und-wahnsinn",
+    "title": "Designstudien Quartett – Sehnsucht & Wahnsinn",
+    "coverImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Lancia_Stratos_Zero_%28Bertone%29.jpg",
+    "titleImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Lancia_Stratos_Zero_%28Bertone%29.jpg",
+    "locale": "de-DE"
+  },
+  "categories": [
+    {
+      "key": "leistung_ps",
+      "label": "Leistung",
+      "unit": "PS",
+      "better": "higher"
+    },
+    {
+      "key": "hoechstgeschwindigkeit_kmh",
+      "label": "Höchstgeschwindigkeit",
+      "unit": "km/h",
+      "better": "higher"
+    },
+    {
+      "key": "gewicht_kg",
+      "label": "Gewicht",
+      "unit": "kg",
+      "better": "lower"
+    },
+    {
+      "key": "entwicklungszeit_monate",
+      "label": "Entwicklungszeit",
+      "unit": "Monate",
+      "better": "lower"
+    },
+    {
+      "key": "entwicklungskosten_heute_mio_usd",
+      "label": "Entwicklungskosten heute",
+      "unit": "Mio. USD",
+      "better": "higher"
+    },
+    {
+      "key": "futurismus_score",
+      "label": "Futurismus",
+      "unit": "Score",
+      "better": "higher"
+    },
+    {
+      "key": "wtf_faktor_score",
+      "label": "WTF-Faktor",
+      "unit": "Score",
+      "better": "higher"
+    },
+    {
+      "key": "sehnsuchtsfaktor_score",
+      "label": "Sehnsuchtsfaktor",
+      "unit": "Score",
+      "better": "higher"
+    }
+  ],
+  "cards": [
+    {
+      "id": "DS01",
+      "title": "Alfa Romeo BAT 7 (1954)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Alfa_Romeo_BAT_7.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 90,
+        "hoechstgeschwindigkeit_kmh": 200,
+        "gewicht_kg": 1100,
+        "entwicklungszeit_monate": 14,
+        "entwicklungskosten_heute_mio_usd": 3.2,
+        "futurismus_score": 9,
+        "wtf_faktor_score": 8,
+        "sehnsuchtsfaktor_score": 8
+      }
+    },
+    {
+      "id": "DS02",
+      "title": "Cadillac Cyclone (1959)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cadillac_Cyclone_Concept.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 325,
+        "hoechstgeschwindigkeit_kmh": 210,
+        "gewicht_kg": 1850,
+        "entwicklungszeit_monate": 18,
+        "entwicklungskosten_heute_mio_usd": 8.0,
+        "futurismus_score": 10,
+        "wtf_faktor_score": 9,
+        "sehnsuchtsfaktor_score": 7
+      }
+    },
+    {
+      "id": "DS03",
+      "title": "Alfa Romeo Carabo (1968)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/1968_Alfa_Romeo_Carabo.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 230,
+        "hoechstgeschwindigkeit_kmh": 250,
+        "gewicht_kg": 1000,
+        "entwicklungszeit_monate": 10,
+        "entwicklungskosten_heute_mio_usd": 5.0,
+        "futurismus_score": 10,
+        "wtf_faktor_score": 9,
+        "sehnsuchtsfaktor_score": 10
+      }
+    },
+    {
+      "id": "DS04",
+      "title": "Mercedes-Benz C111-II (1970)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercedes-Benz_C111.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 350,
+        "hoechstgeschwindigkeit_kmh": 300,
+        "gewicht_kg": 1260,
+        "entwicklungszeit_monate": 24,
+        "entwicklungskosten_heute_mio_usd": 18.0,
+        "futurismus_score": 10,
+        "wtf_faktor_score": 8,
+        "sehnsuchtsfaktor_score": 10
+      }
+    },
+    {
+      "id": "DS05",
+      "title": "Lancia Stratos Zero (1970)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Lancia_Stratos_Zero_%28Bertone%29.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 115,
+        "hoechstgeschwindigkeit_kmh": 190,
+        "gewicht_kg": 980,
+        "entwicklungszeit_monate": 6,
+        "entwicklungskosten_heute_mio_usd": 2.8,
+        "futurismus_score": 10,
+        "wtf_faktor_score": 10,
+        "sehnsuchtsfaktor_score": 9
+      }
+    },
+    {
+      "id": "DS06",
+      "title": "Ferrari 512 S Modulo (1970)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ferrari_512_S_Modulo_%2852454059519%29.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 550,
+        "hoechstgeschwindigkeit_kmh": 350,
+        "gewicht_kg": 900,
+        "entwicklungszeit_monate": 9,
+        "entwicklungskosten_heute_mio_usd": 7.5,
+        "futurismus_score": 10,
+        "wtf_faktor_score": 10,
+        "sehnsuchtsfaktor_score": 10
+      }
+    },
+    {
+      "id": "DS07",
+      "title": "Maserati Boomerang (1971)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Maserati_Boomerang_fl.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 310,
+        "hoechstgeschwindigkeit_kmh": 300,
+        "gewicht_kg": 1400,
+        "entwicklungszeit_monate": 12,
+        "entwicklungskosten_heute_mio_usd": 6.2,
+        "futurismus_score": 9,
+        "wtf_faktor_score": 9,
+        "sehnsuchtsfaktor_score": 9
+      }
+    },
+    {
+      "id": "DS08",
+      "title": "BMW Turbo (1972)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/BMW_Turbo_v.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 200,
+        "hoechstgeschwindigkeit_kmh": 250,
+        "gewicht_kg": 980,
+        "entwicklungszeit_monate": 14,
+        "entwicklungskosten_heute_mio_usd": 6.8,
+        "futurismus_score": 10,
+        "wtf_faktor_score": 8,
+        "sehnsuchtsfaktor_score": 9
+      }
+    },
+    {
+      "id": "DS09",
+      "title": "Chevrolet Aerovette (1973)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/1973_Aerovette_%2832379982731%29.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 420,
+        "hoechstgeschwindigkeit_kmh": 300,
+        "gewicht_kg": 1380,
+        "entwicklungszeit_monate": 22,
+        "entwicklungskosten_heute_mio_usd": 14.0,
+        "futurismus_score": 9,
+        "wtf_faktor_score": 7,
+        "sehnsuchtsfaktor_score": 9
+      }
+    },
+    {
+      "id": "DS10",
+      "title": "Lancia Megagamma (1978)",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/1/1d/Megagamma1_big.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 140,
+        "hoechstgeschwindigkeit_kmh": 190,
+        "gewicht_kg": 1040,
+        "entwicklungszeit_monate": 8,
+        "entwicklungskosten_heute_mio_usd": 2.2,
+        "futurismus_score": 8,
+        "wtf_faktor_score": 7,
+        "sehnsuchtsfaktor_score": 8
+      }
+    },
+    {
+      "id": "DS11",
+      "title": "Aston Martin Bulldog (1979)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/1979_Aston_Martin_Bulldog.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 700,
+        "hoechstgeschwindigkeit_kmh": 320,
+        "gewicht_kg": 1450,
+        "entwicklungszeit_monate": 30,
+        "entwicklungskosten_heute_mio_usd": 18.0,
+        "futurismus_score": 10,
+        "wtf_faktor_score": 8,
+        "sehnsuchtsfaktor_score": 10
+      }
+    },
+    {
+      "id": "DS12",
+      "title": "Citroën Karin (1980)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Citro%C3%ABn_Karin.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 90,
+        "hoechstgeschwindigkeit_kmh": 170,
+        "gewicht_kg": 950,
+        "entwicklungszeit_monate": 11,
+        "entwicklungskosten_heute_mio_usd": 3.5,
+        "futurismus_score": 9,
+        "wtf_faktor_score": 10,
+        "sehnsuchtsfaktor_score": 6
+      }
+    },
+    {
+      "id": "DS13",
+      "title": "Peugeot Oxia (1988)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Peugeot_Oxia.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 680,
+        "hoechstgeschwindigkeit_kmh": 350,
+        "gewicht_kg": 1380,
+        "entwicklungszeit_monate": 20,
+        "entwicklungskosten_heute_mio_usd": 16.0,
+        "futurismus_score": 9,
+        "wtf_faktor_score": 8,
+        "sehnsuchtsfaktor_score": 10
+      }
+    },
+    {
+      "id": "DS14",
+      "title": "Audi Avus quattro (1991)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Audi_Avus_quattro.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 509,
+        "hoechstgeschwindigkeit_kmh": 340,
+        "gewicht_kg": 1250,
+        "entwicklungszeit_monate": 18,
+        "entwicklungskosten_heute_mio_usd": 22.0,
+        "futurismus_score": 10,
+        "wtf_faktor_score": 7,
+        "sehnsuchtsfaktor_score": 10
+      }
+    },
+    {
+      "id": "DS15",
+      "title": "BMW Nazca C2 (1991)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/BMW_Nazca_C2.JPG",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 300,
+        "hoechstgeschwindigkeit_kmh": 297,
+        "gewicht_kg": 1100,
+        "entwicklungszeit_monate": 16,
+        "entwicklungskosten_heute_mio_usd": 12.0,
+        "futurismus_score": 9,
+        "wtf_faktor_score": 7,
+        "sehnsuchtsfaktor_score": 10
+      }
+    },
+    {
+      "id": "DS16",
+      "title": "Ford GT90 (1995)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ford_GT90_Front.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 720,
+        "hoechstgeschwindigkeit_kmh": 378,
+        "gewicht_kg": 1450,
+        "entwicklungszeit_monate": 14,
+        "entwicklungskosten_heute_mio_usd": 20.0,
+        "futurismus_score": 10,
+        "wtf_faktor_score": 7,
+        "sehnsuchtsfaktor_score": 10
+      }
+    },
+    {
+      "id": "DS17",
+      "title": "Volkswagen W12 Nardò (2001)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Volkswagen_W12_Nardo_2001.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 600,
+        "hoechstgeschwindigkeit_kmh": 357,
+        "gewicht_kg": 1200,
+        "entwicklungszeit_monate": 17,
+        "entwicklungskosten_heute_mio_usd": 24.0,
+        "futurismus_score": 9,
+        "wtf_faktor_score": 7,
+        "sehnsuchtsfaktor_score": 10
+      }
+    },
+    {
+      "id": "DS18",
+      "title": "Cadillac Sixteen (2003)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/2003_Cadillac_Sixteen_concept.png",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 1000,
+        "hoechstgeschwindigkeit_kmh": 315,
+        "gewicht_kg": 2270,
+        "entwicklungszeit_monate": 30,
+        "entwicklungskosten_heute_mio_usd": 35.0,
+        "futurismus_score": 9,
+        "wtf_faktor_score": 8,
+        "sehnsuchtsfaktor_score": 9
+      }
+    },
+    {
+      "id": "DS19",
+      "title": "Chrysler ME Four-Twelve (2004)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/2004_Chrysler_ME_Four-Twelve_Petersen_Automotive_Museum.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 850,
+        "hoechstgeschwindigkeit_kmh": 400,
+        "gewicht_kg": 1310,
+        "entwicklungszeit_monate": 16,
+        "entwicklungskosten_heute_mio_usd": 28.0,
+        "futurismus_score": 9,
+        "wtf_faktor_score": 8,
+        "sehnsuchtsfaktor_score": 10
+      }
+    },
+    {
+      "id": "DS20",
+      "title": "Renault Trezor (2016)",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Renault_Trezor_-_Mondial_de_l%27Automobile_de_Paris_2016_-_001.jpg",
+      "status": "complete",
+      "stats": {
+        "leistung_ps": 350,
+        "hoechstgeschwindigkeit_kmh": 250,
+        "gewicht_kg": 1600,
+        "entwicklungszeit_monate": 22,
+        "entwicklungskosten_heute_mio_usd": 18.0,
+        "futurismus_score": 10,
+        "wtf_faktor_score": 7,
+        "sehnsuchtsfaktor_score": 10
+      }
+    }
+  ]
+}
