@@ -5,6 +5,12 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      full_deploy:
+        description: Full deploy with remote cleanup
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   deploy:
@@ -35,8 +41,10 @@ jobs:
           port: 21
           local-dir: ./
           server-dir: ./quartett/
-          dangerous-clean-slate: false
+          dangerous-clean-slate: ${{ github.event_name == 'workflow_dispatch' && inputs.full_deploy || false }}
           exclude: |
             **/.DS_Store
             .gitignore
             api/sessions/.gitkeep
+            .git
+            .github
