@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    name: Deploy to Quartet subfolder
+    name: Deploy to Quartett subfolder
     runs-on: ubuntu-latest
 
     steps:
@@ -34,7 +34,7 @@ jobs:
           protocol: ftps
           port: 21
           local-dir: ./
-          server-dir: ./quartet/
+          server-dir: ./quartett/
           dangerous-clean-slate: false
           exclude: |
             **/.DS_Store
