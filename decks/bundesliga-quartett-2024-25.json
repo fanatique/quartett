@@ -1,0 +1,925 @@
+{
+  "deck": {
+    "id": "bundesliga-quartett-2024-25",
+    "title": "Bundesliga-Quartett – alle Vereine seit Gründung 1963",
+    "coverImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/FC_Bayern_M%C3%BCnchen_logo_%282024%29.svg/512px-FC_Bayern_M%C3%BCnchen_logo_%282024%29.svg.png",
+    "titleImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/FC_Bayern_M%C3%BCnchen_logo_%282024%29.svg/512px-FC_Bayern_M%C3%BCnchen_logo_%282024%29.svg.png",
+    "locale": "de-DE"
+  },
+  "categories": [
+    {
+      "key": "bundesliga_saisons",
+      "label": "Bundesliga-Saisons",
+      "unit": "",
+      "better": "higher"
+    },
+    {
+      "key": "meistertitel",
+      "label": "Meistertitel",
+      "unit": "",
+      "better": "higher"
+    },
+    {
+      "key": "dfb_pokalsiege",
+      "label": "DFB-Pokalsiege",
+      "unit": "",
+      "better": "higher"
+    },
+    {
+      "key": "stadionkapazitaet",
+      "label": "Stadionkapazität",
+      "unit": "",
+      "better": "higher"
+    },
+    {
+      "key": "mitglieder",
+      "label": "Mitglieder",
+      "unit": "",
+      "better": "higher"
+    },
+    {
+      "key": "internationale_titel",
+      "label": "Internationale Titel",
+      "unit": "",
+      "better": "higher"
+    },
+    {
+      "key": "gruendungsjahr",
+      "label": "Gründungsjahr",
+      "unit": "",
+      "better": "lower"
+    }
+  ],
+  "cards": [
+    {
+      "id": "BL01",
+      "title": "FC Bayern München",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/FC_Bayern_M%C3%BCnchen_logo_%282024%29.svg/512px-FC_Bayern_M%C3%BCnchen_logo_%282024%29.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 60,
+        "meistertitel": 34,
+        "dfb_pokalsiege": 20,
+        "stadionkapazitaet": 75024,
+        "mitglieder": 432500,
+        "internationale_titel": 14,
+        "gruendungsjahr": 1900
+      }
+    },
+    {
+      "id": "BL02",
+      "title": "Borussia Dortmund",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Borussia_Dortmund_logo.svg/512px-Borussia_Dortmund_logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 58,
+        "meistertitel": 8,
+        "dfb_pokalsiege": 5,
+        "stadionkapazitaet": 81365,
+        "mitglieder": 238000,
+        "internationale_titel": 3,
+        "gruendungsjahr": 1909
+      }
+    },
+    {
+      "id": "BL03",
+      "title": "Hamburger SV",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Hamburger_SV_logo.svg/512px-Hamburger_SV_logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 55,
+        "meistertitel": 6,
+        "dfb_pokalsiege": 3,
+        "stadionkapazitaet": 57000,
+        "mitglieder": 145000,
+        "internationale_titel": 2,
+        "gruendungsjahr": 1887
+      }
+    },
+    {
+      "id": "BL04",
+      "title": "Werder Bremen",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/SV-Werder-Bremen-Logo.svg/512px-SV-Werder-Bremen-Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 60,
+        "meistertitel": 4,
+        "dfb_pokalsiege": 6,
+        "stadionkapazitaet": 42100,
+        "mitglieder": 68000,
+        "internationale_titel": 1,
+        "gruendungsjahr": 1899
+      }
+    },
+    {
+      "id": "BL05",
+      "title": "VfB Stuttgart",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/VfB_Stuttgart_1893_Logo.svg/512px-VfB_Stuttgart_1893_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 58,
+        "meistertitel": 5,
+        "dfb_pokalsiege": 4,
+        "stadionkapazitaet": 60449,
+        "mitglieder": 130000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1893
+      }
+    },
+    {
+      "id": "BL06",
+      "title": "Eintracht Frankfurt",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/Eintracht_Frankfurt_Logo.svg/512px-Eintracht_Frankfurt_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 56,
+        "meistertitel": 1,
+        "dfb_pokalsiege": 5,
+        "stadionkapazitaet": 59500,
+        "mitglieder": 160000,
+        "internationale_titel": 2,
+        "gruendungsjahr": 1899
+      }
+    },
+    {
+      "id": "BL07",
+      "title": "Borussia Mönchengladbach",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Borussia_M%C3%B6nchengladbach_logo.svg/512px-Borussia_M%C3%B6nchengladbach_logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 57,
+        "meistertitel": 5,
+        "dfb_pokalsiege": 3,
+        "stadionkapazitaet": 54057,
+        "mitglieder": 110000,
+        "internationale_titel": 2,
+        "gruendungsjahr": 1900
+      }
+    },
+    {
+      "id": "BL08",
+      "title": "1. FC Köln",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Logo_1._FC_K%C3%B6ln.svg/512px-Logo_1._FC_K%C3%B6ln.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 52,
+        "meistertitel": 3,
+        "dfb_pokalsiege": 4,
+        "stadionkapazitaet": 50076,
+        "mitglieder": 160000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1948
+      }
+    },
+    {
+      "id": "BL09",
+      "title": "FC Schalke 04",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/FC_Schalke_04_Logo.svg/512px-FC_Schalke_04_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 54,
+        "meistertitel": 7,
+        "dfb_pokalsiege": 5,
+        "stadionkapazitaet": 62271,
+        "mitglieder": 210000,
+        "internationale_titel": 1,
+        "gruendungsjahr": 1904
+      }
+    },
+    {
+      "id": "BL10",
+      "title": "Bayer 04 Leverkusen",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Bayer_04_Leverkusen_logo.svg/512px-Bayer_04_Leverkusen_logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 46,
+        "meistertitel": 1,
+        "dfb_pokalsiege": 2,
+        "stadionkapazitaet": 30210,
+        "mitglieder": 50000,
+        "internationale_titel": 1,
+        "gruendungsjahr": 1904
+      }
+    },
+    {
+      "id": "BL11",
+      "title": "1. FC Kaiserslautern",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/1._FC_Kaiserslautern_Logo.svg/512px-1._FC_Kaiserslautern_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 44,
+        "meistertitel": 4,
+        "dfb_pokalsiege": 2,
+        "stadionkapazitaet": 49327,
+        "mitglieder": 39000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1900
+      }
+    },
+    {
+      "id": "BL12",
+      "title": "1. FC Nürnberg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/1._FC_N%C3%BCrnberg_logo.svg/512px-1._FC_N%C3%BCrnberg_logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 33,
+        "meistertitel": 9,
+        "dfb_pokalsiege": 4,
+        "stadionkapazitaet": 50000,
+        "mitglieder": 40500,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1900
+      }
+    },
+    {
+      "id": "BL13",
+      "title": "Hertha BSC",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Hertha_BSC_Logo_2012.svg/512px-Hertha_BSC_Logo_2012.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 40,
+        "meistertitel": 2,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 74649,
+        "mitglieder": 60600,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1892
+      }
+    },
+    {
+      "id": "BL14",
+      "title": "Karlsruher SC",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Karlsruher_SC_Logo_2.svg/512px-Karlsruher_SC_Logo_2.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 24,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 2,
+        "stadionkapazitaet": 34302,
+        "mitglieder": 17000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1894
+      }
+    },
+    {
+      "id": "BL15",
+      "title": "MSV Duisburg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/MSV_Duisburg_Logo.svg/512px-MSV_Duisburg_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 28,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 31514,
+        "mitglieder": 10000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1902
+      }
+    },
+    {
+      "id": "BL16",
+      "title": "Eintracht Braunschweig",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Eintracht_Braunschweig_logo.svg/512px-Eintracht_Braunschweig_logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 21,
+        "meistertitel": 1,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 23325,
+        "mitglieder": 25000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1895
+      }
+    },
+    {
+      "id": "BL17",
+      "title": "TSV 1860 München",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/TSV_1860_M%C3%BCnchen_Logo.svg/512px-TSV_1860_M%C3%BCnchen_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 20,
+        "meistertitel": 1,
+        "dfb_pokalsiege": 2,
+        "stadionkapazitaet": 15000,
+        "mitglieder": 26500,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1860
+      }
+    },
+    {
+      "id": "BL18",
+      "title": "Preußen Münster",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Preu%C3%9Fen_M%C3%BCnster_Logo.svg/512px-Preu%C3%9Fen_M%C3%BCnster_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 1,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 12672,
+        "mitglieder": 15000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1906
+      }
+    },
+    {
+      "id": "BL19",
+      "title": "1. FC Saarbrücken",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/1._FC_Saarbr%C3%BCcken_logo.svg/512px-1._FC_Saarbr%C3%BCcken_logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 5,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 16003,
+        "mitglieder": 10000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1903
+      }
+    },
+    {
+      "id": "BL20",
+      "title": "Borussia Neunkirchen",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Borussia_Neunkirchen.svg/512px-Borussia_Neunkirchen.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 3,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 23400,
+        "mitglieder": 1000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1905
+      }
+    },
+    {
+      "id": "BL21",
+      "title": "Hannover 96",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Hannover_96_Logo.svg/512px-Hannover_96_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 30,
+        "meistertitel": 2,
+        "dfb_pokalsiege": 1,
+        "stadionkapazitaet": 49200,
+        "mitglieder": 27000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1896
+      }
+    },
+    {
+      "id": "BL22",
+      "title": "Tasmania Berlin",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/SV_Tasmania_Berlin_Logo.svg/512px-SV_Tasmania_Berlin_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 1,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 3000,
+        "mitglieder": 500,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1900
+      }
+    },
+    {
+      "id": "BL23",
+      "title": "Rot-Weiss Essen",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Rot-Weiss_Essen_Logo.svg/512px-Rot-Weiss_Essen_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 7,
+        "meistertitel": 1,
+        "dfb_pokalsiege": 1,
+        "stadionkapazitaet": 20650,
+        "mitglieder": 17000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1907
+      }
+    },
+    {
+      "id": "BL24",
+      "title": "Alemannia Aachen",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Alemannia_Aachen_Logo.svg/512px-Alemannia_Aachen_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 4,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 32960,
+        "mitglieder": 13000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1900
+      }
+    },
+    {
+      "id": "BL25",
+      "title": "Kickers Offenbach",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Kickers_Offenbach_Logo.svg/512px-Kickers_Offenbach_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 7,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 1,
+        "stadionkapazitaet": 20500,
+        "mitglieder": 4000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1901
+      }
+    },
+    {
+      "id": "BL26",
+      "title": "Rot-Weiß Oberhausen",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Rot-Wei%C3%9F_Oberhausen_Logo.svg/512px-Rot-Wei%C3%9F_Oberhausen_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 4,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 17165,
+        "mitglieder": 3000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1904
+      }
+    },
+    {
+      "id": "BL27",
+      "title": "Arminia Bielefeld",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Arminia_Bielefeld_logo.svg/512px-Arminia_Bielefeld_logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 19,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 27332,
+        "mitglieder": 30000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1905
+      }
+    },
+    {
+      "id": "BL28",
+      "title": "Fortuna Düsseldorf",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Fortuna_D%C3%BCsseldorf.svg/512px-Fortuna_D%C3%BCsseldorf.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 25,
+        "meistertitel": 1,
+        "dfb_pokalsiege": 2,
+        "stadionkapazitaet": 54600,
+        "mitglieder": 38000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1895
+      }
+    },
+    {
+      "id": "BL29",
+      "title": "VfL Bochum",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/VfL_Bochum_logo.svg/512px-VfL_Bochum_logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 38,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 27599,
+        "mitglieder": 32750,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1938
+      }
+    },
+    {
+      "id": "BL30",
+      "title": "Wuppertaler SV",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Wuppertaler_SV_Logo.svg/512px-Wuppertaler_SV_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 3,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 23067,
+        "mitglieder": 4000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1954
+      }
+    },
+    {
+      "id": "BL31",
+      "title": "KFC Uerdingen 05",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/KFC_Uerdingen_05_Logo.svg/512px-KFC_Uerdingen_05_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 14,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 1,
+        "stadionkapazitaet": 10000,
+        "mitglieder": 1400,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1905
+      }
+    },
+    {
+      "id": "BL32",
+      "title": "Tennis Borussia Berlin",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Tennis_Borussia_Berlin_Logo.svg/512px-Tennis_Borussia_Berlin_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 2,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 15005,
+        "mitglieder": 950,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1902
+      }
+    },
+    {
+      "id": "BL33",
+      "title": "FC St. Pauli",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/FC_St._Pauli_logo_%282018%29.svg/512px-FC_St._Pauli_logo_%282018%29.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 9,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 29546,
+        "mitglieder": 55000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1910
+      }
+    },
+    {
+      "id": "BL34",
+      "title": "SV Darmstadt 98",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e5/SV_Darmstadt_98_Logo.svg/512px-SV_Darmstadt_98_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 5,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 17810,
+        "mitglieder": 17000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1898
+      }
+    },
+    {
+      "id": "BL35",
+      "title": "Stuttgarter Kickers",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Stuttgarter_Kickers_Logo.svg/512px-Stuttgarter_Kickers_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 2,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 11449,
+        "mitglieder": 4500,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1899
+      }
+    },
+    {
+      "id": "BL36",
+      "title": "FC 08 Homburg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/FC_08_Homburg_Logo.svg/512px-FC_08_Homburg_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 3,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 16488,
+        "mitglieder": 1500,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1908
+      }
+    },
+    {
+      "id": "BL37",
+      "title": "Blau-Weiß 90 Berlin",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/SpVgg_Blau-Wei%C3%9F_1890_Berlin_Logo.svg/512px-SpVgg_Blau-Wei%C3%9F_1890_Berlin_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 1,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 33000,
+        "mitglieder": 0,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1890
+      }
+    },
+    {
+      "id": "BL38",
+      "title": "SG Wattenscheid 09",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/SG_Wattenscheid_09_Logo.svg/512px-SG_Wattenscheid_09_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 4,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 16500,
+        "mitglieder": 1500,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1909
+      }
+    },
+    {
+      "id": "BL39",
+      "title": "Hansa Rostock",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/FC_Hansa_Rostock_Logo.svg/512px-FC_Hansa_Rostock_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 12,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 29000,
+        "mitglieder": 31000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1965
+      }
+    },
+    {
+      "id": "BL40",
+      "title": "Dynamo Dresden",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Dynamo_Dresden_logo.svg/512px-Dynamo_Dresden_logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 4,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 32066,
+        "mitglieder": 37500,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1953
+      }
+    },
+    {
+      "id": "BL41",
+      "title": "VfB Leipzig",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/VfB_Leipzig.svg/512px-VfB_Leipzig.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 1,
+        "meistertitel": 3,
+        "dfb_pokalsiege": 1,
+        "stadionkapazitaet": 7000,
+        "mitglieder": 0,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1893
+      }
+    },
+    {
+      "id": "BL42",
+      "title": "SC Freiburg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/SC_Freiburg_logo.svg/512px-SC_Freiburg_logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 25,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 34700,
+        "mitglieder": 80000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1904
+      }
+    },
+    {
+      "id": "BL43",
+      "title": "VfL Wolfsburg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Logo-VfL-Wolfsburg.svg/512px-Logo-VfL-Wolfsburg.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 28,
+        "meistertitel": 1,
+        "dfb_pokalsiege": 1,
+        "stadionkapazitaet": 30000,
+        "mitglieder": 20500,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1945
+      }
+    },
+    {
+      "id": "BL44",
+      "title": "SSV Ulm 1846",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/SSV_Ulm_1846_Fu%C3%9Fball_Logo.svg/512px-SSV_Ulm_1846_Fu%C3%9Fball_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 1,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 17400,
+        "mitglieder": 12000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1846
+      }
+    },
+    {
+      "id": "BL45",
+      "title": "SpVgg Unterhaching",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/SpVgg_Unterhaching_Logo.svg/512px-SpVgg_Unterhaching_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 2,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 15053,
+        "mitglieder": 4500,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1925
+      }
+    },
+    {
+      "id": "BL46",
+      "title": "Energie Cottbus",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/FC_Energie_Cottbus_Logo.svg/512px-FC_Energie_Cottbus_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 6,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 22528,
+        "mitglieder": 6000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1966
+      }
+    },
+    {
+      "id": "BL47",
+      "title": "1. FSV Mainz 05",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/FSV_Mainz_05_Logo_2009.svg/512px-FSV_Mainz_05_Logo_2009.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 19,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 34034,
+        "mitglieder": 30000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1905
+      }
+    },
+    {
+      "id": "BL48",
+      "title": "TSG 1899 Hoffenheim",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Logo_TSG_Hoffenheim.svg/512px-Logo_TSG_Hoffenheim.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 17,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 30150,
+        "mitglieder": 11000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1899
+      }
+    },
+    {
+      "id": "BL49",
+      "title": "FC Augsburg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Logo_FC_Augsburg.svg/512px-Logo_FC_Augsburg.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 14,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 30660,
+        "mitglieder": 31000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1907
+      }
+    },
+    {
+      "id": "BL50",
+      "title": "SpVgg Greuther Fürth",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/SpVgg_Greuther_F%C3%BCrth_2017_logo.svg/512px-SpVgg_Greuther_F%C3%BCrth_2017_logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 2,
+        "meistertitel": 3,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 16626,
+        "mitglieder": 13000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1903
+      }
+    },
+    {
+      "id": "BL51",
+      "title": "SC Paderborn 07",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/SC_Paderborn_07_logo.svg/512px-SC_Paderborn_07_logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 2,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 15000,
+        "mitglieder": 9000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1907
+      }
+    },
+    {
+      "id": "BL52",
+      "title": "FC Ingolstadt 04",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/FC_Ingolstadt_04_logo.svg/512px-FC_Ingolstadt_04_logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 2,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 15800,
+        "mitglieder": 5000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 2004
+      }
+    },
+    {
+      "id": "BL53",
+      "title": "RB Leipzig",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/RB_Leipzig_2014_logo.svg/512px-RB_Leipzig_2014_logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 9,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 2,
+        "stadionkapazitaet": 47800,
+        "mitglieder": 1100,
+        "internationale_titel": 0,
+        "gruendungsjahr": 2009
+      }
+    },
+    {
+      "id": "BL54",
+      "title": "1. FC Union Berlin",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/1._FC_Union_Berlin_Logo.svg/512px-1._FC_Union_Berlin_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 6,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 22467,
+        "mitglieder": 72000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1966
+      }
+    },
+    {
+      "id": "BL55",
+      "title": "1. FC Heidenheim",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/1._FC_Heidenheim_1846.svg/512px-1._FC_Heidenheim_1846.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 2,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 15000,
+        "mitglieder": 11000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1846
+      }
+    },
+    {
+      "id": "BL56",
+      "title": "Holstein Kiel",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Holstein_Kiel_Logo.svg/512px-Holstein_Kiel_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 1,
+        "meistertitel": 1,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 15034,
+        "mitglieder": 11500,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1900
+      }
+    },
+    {
+      "id": "BL57",
+      "title": "SV Waldhof Mannheim",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/SV_Waldhof_Mannheim_Logo.svg/512px-SV_Waldhof_Mannheim_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 7,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 25700,
+        "mitglieder": 6000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1907
+      }
+    },
+    {
+      "id": "BL58",
+      "title": "SC Fortuna Köln",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/SC_Fortuna_K%C3%B6ln_Logo.svg/512px-SC_Fortuna_K%C3%B6ln_Logo.svg.png",
+      "status": "complete",
+      "stats": {
+        "bundesliga_saisons": 1,
+        "meistertitel": 0,
+        "dfb_pokalsiege": 0,
+        "stadionkapazitaet": 14944,
+        "mitglieder": 3000,
+        "internationale_titel": 0,
+        "gruendungsjahr": 1948
+      }
+    }
+  ]
+}

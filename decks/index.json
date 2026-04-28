@@ -40,5 +40,12 @@
     "coverImageUrl": "https://static.necy.eu/i/w/203838_1800x900.webp",
     "file": "floorballschlaeger-quartett-2025.json",
     "type": "sport"
+  },
+  {
+    "id": "bundesliga-quartett-2024-25",
+    "title": "Bundesliga-Quartett – alle Vereine seit Gründung 1963",
+    "coverImageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/FC_Bayern_M%C3%BCnchen_logo_%282024%29.svg/512px-FC_Bayern_M%C3%BCnchen_logo_%282024%29.svg.png",
+    "file": "bundesliga-quartett-2024-25.json",
+    "type": "sport"
   }
 ]
