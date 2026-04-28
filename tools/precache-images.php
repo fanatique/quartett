@@ -14,7 +14,7 @@ const CARD_H         = 220;
 const COVER_W        = 400;
 const COVER_H        = 200;
 const WEBP_QUALITY   = 85;
-const MAX_DOWNLOAD_B = 5 * 1024 * 1024;
+const MAX_DOWNLOAD_B = 20 * 1024 * 1024;
 const MAX_REDIRECTS  = 5;
 const CURL_TIMEOUT_S = 10;
 
@@ -142,10 +142,6 @@ function fetchImage(string $url): string
         CURLOPT_SSL_VERIFYHOST   => 2,
         CURLOPT_USERAGENT        => 'QuartettImageProxy/1.0',
         CURLOPT_PROTOCOLS        => CURLPROTO_HTTPS | CURLPROTO_HTTP,
-        CURLOPT_NOPROGRESS       => false,
-        CURLOPT_PROGRESSFUNCTION => function ($ch, $dlTotal, $dlNow) {
-            return $dlNow > MAX_DOWNLOAD_B ? 1 : 0;
-        },
     ]);
 
     $data  = curl_exec($ch);
