@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s \"https://en.wikipedia.org/w/api.php?action=query&titles=1._FC_Kaiserslautern&prop=revisions&rvprop=content&rvsection=0&format=json\")",
+      "Bash(python3 -c ' *)",
+      "Bash(curl -sIL \"https://commons.wikimedia.org/wiki/Special:FilePath/Logo_1_FC_Kaiserslautern.svg?width=512\")"
+    ]
+  }
+}

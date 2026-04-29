@@ -159,7 +159,7 @@
     {
       "id": "BL08",
       "title": "1. FC Köln",
-      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_1._FC_K%C3%B6ln.svg?width=512",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Wappen_1_FC_Koeln.svg?width=512",
       "status": "complete",
       "stats": {
         "bundesliga_saisons": 52,
@@ -189,7 +189,7 @@
     {
       "id": "BL10",
       "title": "Bayer 04 Leverkusen",
-      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Bayer_04_Leverkusen_logo.svg?width=512",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/5/59/Bayer_04_Leverkusen_logo.svg/960px-Bayer_04_Leverkusen_logo.svg.png",
       "status": "complete",
       "stats": {
         "bundesliga_saisons": 46,
@@ -204,7 +204,7 @@
     {
       "id": "BL11",
       "title": "1. FC Kaiserslautern",
-      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/1._FC_Kaiserslautern_Logo.svg?width=512",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Logo_1_FC_Kaiserslautern.svg?width=512",
       "status": "complete",
       "stats": {
         "bundesliga_saisons": 44,
@@ -264,7 +264,7 @@
     {
       "id": "BL15",
       "title": "MSV Duisburg",
-      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/MSV_Duisburg_Logo.svg?width=512",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/Msv_duisburg%28new%29.svg/960px-Msv_duisburg%28new%29.svg.png",
       "status": "complete",
       "stats": {
         "bundesliga_saisons": 28,
@@ -279,7 +279,7 @@
     {
       "id": "BL16",
       "title": "Eintracht Braunschweig",
-      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Eintracht_Braunschweig_logo.svg?width=512",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/6/60/Eintracht_Braunschweig_logo.svg/960px-Eintracht_Braunschweig_logo.svg.png",
       "status": "complete",
       "stats": {
         "bundesliga_saisons": 21,
@@ -294,7 +294,7 @@
     {
       "id": "BL17",
       "title": "TSV 1860 München",
-      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/TSV_1860_M%C3%BCnchen_Logo.svg?width=512",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/TSV_1860_M%C3%BCnchen.svg?width=512",
       "status": "complete",
       "stats": {
         "bundesliga_saisons": 20,
