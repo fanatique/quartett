@@ -429,7 +429,7 @@
     {
       "id": "BL26",
       "title": "Rot-Weiß Oberhausen",
-      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/4c/Rot-Wei%C3%9F_Oberhausen_logo.svg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Rot-Wei%C3%9F_Oberhausen_logo.svg/960px-Rot-Wei%C3%9F_Oberhausen_logo.svg.png",
       "status": "complete",
       "stats": {
         "bundesliga_saisons": 4,
@@ -699,7 +699,7 @@
     {
       "id": "BL44",
       "title": "SSV Ulm 1846",
-      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/SSV_Ulm_1846_Fu%C3%9Fball_Logo.svg?width=512",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/SSV_Ulm_1846_Fussball.svg?width=512",
       "status": "complete",
       "stats": {
         "bundesliga_saisons": 1,
@@ -714,7 +714,7 @@
     {
       "id": "BL45",
       "title": "SpVgg Unterhaching",
-      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/SpVgg_Unterhaching_Logo.svg?width=512",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/SpVgg_Unterhaching_logo.svg/960px-SpVgg_Unterhaching_logo.svg.png",
       "status": "complete",
       "stats": {
         "bundesliga_saisons": 2,
@@ -729,7 +729,7 @@
     {
       "id": "BL46",
       "title": "Energie Cottbus",
-      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/FC_Energie_Cottbus_Logo.svg?width=512",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/1/17/FC_Energie_Cottbus_crest.svg/960px-FC_Energie_Cottbus_crest.svg.png",
       "status": "complete",
       "stats": {
         "bundesliga_saisons": 6,
@@ -744,7 +744,7 @@
     {
       "id": "BL47",
       "title": "1. FSV Mainz 05",
-      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/FSV_Mainz_05_Logo_2009.svg?width=512",
+      "imageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/1._FSV_Mainz_05_logo.svg?width=512",
       "status": "complete",
       "stats": {
         "bundesliga_saisons": 19,
