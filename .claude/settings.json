@@ -3,7 +3,12 @@
     "allow": [
       "Bash(curl -s \"https://en.wikipedia.org/w/api.php?action=query&titles=1._FC_Kaiserslautern&prop=revisions&rvprop=content&rvsection=0&format=json\")",
       "Bash(python3 -c ' *)",
-      "Bash(curl -sIL \"https://commons.wikimedia.org/wiki/Special:FilePath/Logo_1_FC_Kaiserslautern.svg?width=512\")"
+      "Bash(curl -sIL \"https://commons.wikimedia.org/wiki/Special:FilePath/Logo_1_FC_Kaiserslautern.svg?width=512\")",
+      "Bash(curl -s \"https://en.wikipedia.org/w/api.php?action=query&titles=Tennis_Borussia_Berlin&prop=revisions&rvprop=content&rvsection=0&format=json\")",
+      "Bash(python3 -c \"import sys,json,re; d=json.load\\(sys.stdin\\); pages=d['query']['pages']; p=next\\(iter\\(pages.values\\(\\)\\)\\); content=p.get\\('revisions',[{}]\\)[0].get\\('*',''\\); matches=re.findall\\(r'image\\\\s*=\\\\s*\\([^\\\\n\\\\|]+\\)', content\\); print\\('TENNIS_BORUSSIA:', matches[:3]\\)\")",
+      "Bash(curl -s --max-time 15 \"https://en.wikipedia.org/w/api.php?action=query&titles=Tennis_Borussia_Berlin&prop=revisions&rvprop=content&rvsection=0&format=json\")",
+      "Bash(python3 -c \"import sys,json,re; d=json.load\\(sys.stdin\\); pages=d['query']['pages']; p=next\\(iter\\(pages.values\\(\\)\\)\\); content=p.get\\('revisions',[{}]\\)[0].get\\('*',''\\); matches=re.findall\\(r'image\\\\s*=\\\\s*\\([^\\\\n\\\\|]+\\)', content\\); print\\(matches[:3]\\)\")",
+      "Bash(curl -s --max-time 15 \"https://en.wikipedia.org/w/api.php?action=query&titles=Tennis_Borussia_Berlin&prop=revisions&rvprop=content&rvsection=0&format=json\" -o /tmp/tennis_borussia.json)"
     ]
   }
 }
